@@ -1,0 +1,39 @@
+{
+    "name": "deseretdigital/cxense-insight-php-sdk",
+    "type": "library",
+    "description": "Library for interfacing with the Cxense Insight API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Russell Ahlstrom",
+            "email": "rahlstrom@deseretdigital.com"
+        },
+        {
+            "name": "Mark Lind",
+            "email": "mlind@deseretdigital.com"
+        },
+        {
+            "name": "Nate Christensen",
+            "email": "natec8@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9.*",
+        "codacy/coverage": "~1.0",
+        "raveren/kint": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CxInsightSDK\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CxInsightSDK\\Tests\\": "tests/"
+        }
+    }
+}
