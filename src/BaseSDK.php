@@ -38,6 +38,11 @@ abstract class BaseSDK
      */
     protected $requestPath = '';
 
+    /**
+     * GuzzleHttp client
+     *
+     * @var GuzzleHttp\Client
+     */
     protected $client;
 
     public function __construct($username, $apiKey, array $siteIds)
@@ -59,6 +64,20 @@ abstract class BaseSDK
     }
 
     /**
+     * Returns the client. Client is created if it is not yet set.
+     *
+     * @return GuzzleHttp\Client
+     */
+    public function getClient()
+    {
+        if (!$this->client) {
+            $this->client = new Client(['base_uri' => self::BASE_URI]);
+        }
+
+        return $this->client;
+    }
+
+    /**
      * Run the request with the given options
      *
      * @param  array $options Request Options See corresponding API documentation for details on available options
@@ -75,36 +94,17 @@ abstract class BaseSDK
         // Add siteGroupId and siteIds to the $options array
         $options['siteIds'] = $this->siteIds;
 
-        try {
-            $response = $client->post(
-                $this->requestPath,
-                [
-                    'body' => json_encode($options),
-                    'headers' => [
-                        self::AUTH_HEADER => $this->generateAuthHeaderValue()
-                    ]
+        $response = $client->post(
+            $this->requestPath,
+            [
+                'body' => json_encode($options),
+                'headers' => [
+                    self::AUTH_HEADER => $this->generateAuthHeaderValue()
                 ]
-            );
-        } catch (GuzzleException $e) {
-            // Forward the exception on
-            throw $e;
-        }
+            ]
+        );
 
         return json_decode($response->getBody()->getContents(), true);
-    }
-
-    /**
-     * Returns the client. Client is created if it is not yet set.
-     *
-     * @return GuzzleHttp\Client
-     */
-    protected function getClient()
-    {
-        if (!$this->client) {
-            $this->client = new Client(['base_uri' => self::BASE_URI]);
-        }
-
-        return $this->client;
     }
 
     /**
