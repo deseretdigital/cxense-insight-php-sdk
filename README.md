@@ -6,7 +6,7 @@ In `composer.json` Add the SDK to your require:
 
 ```json
 "require": {
-    "deseretdigital/cxense-insight-php-sdk": "dev-master"
+    "deseretdigital/cxense-insight-php-sdk": "~1.0"
 }
 ```
 
