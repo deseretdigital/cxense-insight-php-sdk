@@ -1,0 +1,6 @@
+# PHPUnit files and artifacts
+phpunit.xml
+build/*
+
+# Composer files
+vendor/*
