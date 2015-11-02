@@ -2,6 +2,8 @@
 
 namespace CxInsightSDK\Tests;
 
+use CxInsightSDK\Tests\Classes\TestSDK;
+
 use Mockery;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -10,6 +12,11 @@ use GuzzleHttp\Psr7\Response;
 
 class BaseSDKTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        Mockery::close();
+    }
+
     public function testGetData()
     {
         // Setup the test client
@@ -58,7 +65,7 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
 
     public function testGetClient()
     {
-        $testSDK = new \CxInsightSDK\Tests\Classes\TestSDK(
+        $testSDK = new TestSDK(
             'username',
             'apikey',
             [
