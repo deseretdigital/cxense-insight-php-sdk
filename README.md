@@ -66,4 +66,4 @@ $data = $traffic->getData($options);
 
 For more information on options/parameters that can be sent to the cxense API see the [Cxense API Wiki](https://wiki.cxense.com/display/cust/Cxense+Insight+API).
 
-**NOTE:** Currently this only supports for the cxense API endpoints: `/traffic`, `/traffic/event`, `/traffic/custom`
+**NOTE:** Currently this only supports for the cxense API endpoints: `/traffic`, `/traffic/event`, `/traffic/custom`, `/dmp/traffic`, `/dmp/traffic/event`, `/dmp/traffic/custom`
