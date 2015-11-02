@@ -12,6 +12,11 @@ use GuzzleHttp\Psr7\Response;
 
 class BaseSDKTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        Mockery::close();
+    }
+
     public function testGetData()
     {
         // Setup the test client
