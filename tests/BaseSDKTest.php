@@ -2,6 +2,8 @@
 
 namespace CxInsightSDK\Tests;
 
+use CxInsightSDK\Tests\Classes\TestSDK;
+
 use Mockery;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -58,7 +60,7 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
 
     public function testGetClient()
     {
-        $testSDK = new \CxInsightSDK\Tests\Classes\TestSDK(
+        $testSDK = new TestSDK(
             'username',
             'apikey',
             [
