@@ -72,7 +72,7 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
                 'siteId'
             ]
         );
-        ddd($testSDK, get_class_methods($testSDK));
+
         $client = $testSDK->getClient();
 
         $this->assertInstanceOf('GuzzleHttp\Client', $client);
