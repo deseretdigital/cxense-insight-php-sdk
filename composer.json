@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Russell Ahlstrom",
-            "email": "rahlstrom@deseretdigital.com"
+            "email": "russell.ahlstrom@gmail.com"
         },
         {
             "name": "Mark Lind",
@@ -16,6 +16,10 @@
             "name": "Nate Christensen",
             "email": "natec8@gmail.com"
         }
+    ],
+    "keywords": [
+        "cxense",
+        "insight"
     ],
     "require": {
         "guzzlehttp/guzzle": "~6.1"
