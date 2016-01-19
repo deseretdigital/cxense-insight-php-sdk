@@ -6,20 +6,10 @@ In `composer.json` Add the SDK to your require:
 
 ```json
 "require": {
-    "deseretdigital/cxense-insight-php-sdk": "~1.0"
+    "deseretdigital/cxense-insight-php-sdk": "~1.2"
 }
 ```
 
-Add the SDK repository:
-
-```json
- "repositories": [
-    {
-        "type": "vcs",
-        "url":  "git@github.com:deseretdigital/cxense-insight-php-sdk.git"
-    }
-]
-```
 Run `composer install`
 
 If you don't know composer you can read up on it here https://getcomposer.org/
