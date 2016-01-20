@@ -91,8 +91,10 @@ abstract class BaseSDK
 
         $client = $this->getClient();
 
-        // Add siteGroupId and siteIds to the $options array
-        $options['siteIds'] = $this->siteIds;
+        // Add siteIds to the $options array
+        if (!isset($options['siteId']) && !isset($options['siteIds'])) {
+            $options['siteIds'] = $this->siteIds;
+        }
 
         $response = $client->post(
             $this->requestPath,
