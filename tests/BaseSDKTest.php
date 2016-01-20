@@ -37,10 +37,7 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
             'CxInsightSDK\Tests\Classes\TestSDK',
             [
                 'username',
-                'apikey',
-                [
-                    'siteId'
-                ]
+                'apikey'
             ]
         )
             ->makePartial()
@@ -67,10 +64,7 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
     {
         $testSDK = new TestSDK(
             'username',
-            'apikey',
-            [
-                'siteId'
-            ]
+            'apikey'
         );
 
         $client = $testSDK->getClient();

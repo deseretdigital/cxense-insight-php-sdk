@@ -25,13 +25,6 @@ abstract class BaseSDK
     protected $apiKey;
 
     /**
-     * Cxense IDs of sites to fetch data for
-     *
-     * @var array
-     */
-    protected $siteIds;
-
-    /**
      * API endpoint to request data from
      *
      * @var string
@@ -45,11 +38,10 @@ abstract class BaseSDK
      */
     protected $client;
 
-    public function __construct($username, $apiKey, array $siteIds)
+    public function __construct($username, $apiKey)
     {
         $this->username = $username;
         $this->apiKey = $apiKey;
-        $this->siteIds = $siteIds;
     }
 
     /**
