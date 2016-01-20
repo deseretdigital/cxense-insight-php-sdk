@@ -89,14 +89,7 @@ abstract class BaseSDK
             throw new \Exception('requestPath must be specified.');
         }
 
-        $client = $this->getClient();
-
-        // Add siteIds to the $options array
-        if (!isset($options['siteId']) && !isset($options['siteIds'])) {
-            $options['siteIds'] = $this->siteIds;
-        }
-
-        $response = $client->post(
+        $response = $this->getClient()->post(
             $this->requestPath,
             [
                 'body' => json_encode($options),
