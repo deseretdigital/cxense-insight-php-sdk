@@ -92,6 +92,9 @@ class BaseSDKTest extends \PHPUnit_Framework_TestCase
                 'sessionBounces' => 2160,
                 'urls' => 1
             ],
+            'siteIds' => [
+                'aSiteId'
+            ]
         ];
 
         if ($asJsonString) {
