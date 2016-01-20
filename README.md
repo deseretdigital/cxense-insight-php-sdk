@@ -23,10 +23,7 @@ use CxInsightSDK\Traffic;
 
 $traffic = new Traffic(
     'test@example.com',
-    'apikey',
-    [
-        'siteId'
-    ]
+    'apikey'
 );
 
 // Get data for one week's time
@@ -48,6 +45,9 @@ $options = [
             'group' => 'url',
             'items'  => ['http://example.com']
         ]
+    ],
+    'siteIds' => [
+        'siteId'
     ]
 ];
 
