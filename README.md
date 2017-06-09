@@ -6,13 +6,13 @@ In `composer.json` Add the SDK to your require:
 
 ```json
 "require": {
-    "deseretdigital/cxense-insight-php-sdk": "~1.2"
+    "deseretdigital/cxense-insight-php-sdk": "~2.1"
 }
 ```
 
 Run `composer install`
 
-If you don't know composer you can read up on it here https://getcomposer.org/
+If you're not familiar with composer you can read up on it here https://getcomposer.org/
 
 ## Usage
 
@@ -56,4 +56,4 @@ $data = $traffic->getData($options);
 
 For more information on options/parameters that can be sent to the cxense API see the [Cxense API Wiki](https://wiki.cxense.com/display/cust/Cxense+Insight+API).
 
-**NOTE:** Currently this only supports for the cxense API endpoints: `/traffic`, `/traffic/event`, `/traffic/custom`, `/dmp/traffic`, `/dmp/traffic/event`, `/dmp/traffic/custom`, `/document/search`, `/document/update`, `/profile/content/delete`
+**NOTE:** Currently this sDK only supports the following cxense API endpoints (additional endpoints can easily be added): `/traffic`, `/traffic/event`, `/traffic/data`, `/traffic/custom`, `/dmp/traffic`, `/dmp/traffic/event`, `/dmp/traffic/custom`, `/document/search`, `/document/update`, `/profile/content/delete`
